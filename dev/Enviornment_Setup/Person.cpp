@@ -4,7 +4,7 @@ Person::Person(int personID)
 {
 	id = personID;
 	state = PersonState::UNINFECTED;
-	infectionTIme = 0;
+    infectionTime = 0;
 }
 
 int Person::GetID() const
@@ -17,7 +17,7 @@ PersonState Person::GetState() const
 	return state;
 }
 
-int Person::GetInfectionTime() const
+int Person::GetinfectionTime() const
 {
 	return infectionTime;
 }

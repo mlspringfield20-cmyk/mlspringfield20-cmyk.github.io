@@ -24,7 +24,7 @@ void Simulation::InitializePopulation(int size)
 void Simulation::DisplayStatistics() const
 {
 	int uninfected = 0;
-	int infected = 1;
+	int infected = 0;
 	int mutated = 0;
 	int dead = 0;
 
@@ -72,4 +72,15 @@ void Simulation::AdvanceTurn()
 	}
 
 	std::cout << "\n12 hours have passed. The virus is spreading...\n";
+}
+
+void Simulation::Run()
+{
+
+	for (int i = 0; i < 10; i++)
+	{
+		AdvanceTurn();
+	}
+
+	DisplayStatistics();
 }

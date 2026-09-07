@@ -14,13 +14,14 @@ private:
 
 	int id;
 	PersonState state;
-	int InfectionTime;
+	int infectionTime;
 
 public:
+	Person(int personID);
 
 	int GetID() const;
 	PersonState GetState() const;
-	int GetInfectionTime() const;
+	int GetinfectionTime() const;
 
 	void SetState(PersonState newState);
 	void IncrementInfectionTime();

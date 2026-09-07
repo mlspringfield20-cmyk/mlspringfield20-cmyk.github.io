@@ -1,20 +1,41 @@
-// Enviornment_Setup.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+#include "Simulation.h"
 
 int main()
 {
-    
+	Simulation simulation;
+
+	int choice = 0;
+
+	while (choice != 3)
+	{
+		std::cout << "\n=== Mutation Virus Simulation ===\n";
+		std::cout << "1. Start Simulation\n";
+		std::cout << "2. Display Statistics\n";
+		std::cout << "3. Exit\n";
+		std::cout << "Enter your choice: ";
+		std::cin >> choice;
+
+		switch (choice)
+		{
+		case 1:
+			simulation.InitializePopulation(100);
+			simulation.Run();
+			break;
+
+		case 2:
+			simulation.DisplayStatistics();
+			break;
+
+		case 3:
+			std::cout << "exiting program...\n";
+			break;
+
+		default:
+			std::cout << "Invalid choice.\n";
+			break;
+		}
+	}
+
+	return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
