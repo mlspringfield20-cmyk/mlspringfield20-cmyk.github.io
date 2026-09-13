@@ -1,5 +1,6 @@
 #include "Simulation.h"
 #include <iostream>
+#include <cstdlib>
 
 Simulation::Simulation()
 {
@@ -50,12 +51,32 @@ void Simulation::DisplayStatistics() const
 		}
 	}
 
-	std::cout << "\n==== Statistics =====\n";
-	std::cout << "Turn: " << currentTurn << '\n';
-	std::cout << "Uninfected: " << uninfected << '\n';
-	std::cout << "Infected: " << infected << '\n';
-	std::cout << "Mutated: " << mutated << '\n';
-	std::cout << "Dead: " << dead << '\n';
+	int totalPopulation = static_cast<int>(population.size());
+
+	double uninfectedPercent = (uninfected * 100.0) / totalPopulation;
+	double infectedPercent = (infected * 100.0) / totalPopulation;
+	double mutatedPercent = (mutated * 100.0) / totalPopulation;
+	double deadPercent = (dead * 100.0) * totalPopulation;
+
+
+	std::cout << "\n==== Detailed Simulation Results====\n";
+	std::cout << "Turn: " << currentTurn << "\n\n";
+
+	std::cout << "Total Population: " << totalPopulation << "\n";
+
+	std::cout << "Uninfected: " << uninfected
+		<< " (" << uninfectedPercent << "%)\n";
+	
+	std::cout << "Infected: " << infected
+		<< " (" <<  infectedPercent << "%)\n";
+
+	std::cout << "Mutated: " << mutated
+		<< " (" <<mutatedPercent << "%)\n";
+
+	std::cout << "dead: " << dead
+		<< " ("  << deadPercent << "%)\n";
+
+	std::cout << "====================================\n";
 }
 
 void Simulation::AdvanceTurn()
@@ -68,6 +89,44 @@ void Simulation::AdvanceTurn()
 		if (person.GetState() == PersonState::INFECTED)
 		{
 			person.IncrementInfectionTime();
+
+			if (person.GetinfectionTime() >= 3)
+			{
+				
+				double chance = static_cast<double>(rand()) / RAND_MAX;
+
+				if (chance < virus.GetMutationrate())
+				{
+					person.SetState(PersonState::MUTATED);
+				}
+				
+			}
+		}
+	}
+
+	for (Person& person : population)
+	{
+		if (person.GetState() == PersonState::MUTATED)
+		{
+			double chance = static_cast<double>(rand()) / RAND_MAX;
+
+			if (chance < virus.GetMortalityRate())
+			{
+				person.SetState(PersonState::DEAD);
+			}
+		}
+	}
+
+	for (Person& person : population)
+	{
+		if (person.GetState() == PersonState::UNINFECTED)
+		{
+			double chance = static_cast<double>(rand()) / RAND_MAX;
+
+			if (chance < virus.GetInfectionRate())
+			{
+				person.SetState(PersonState::INFECTED);
+			}
 		}
 	}
 

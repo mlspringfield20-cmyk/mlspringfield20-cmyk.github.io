@@ -14,7 +14,15 @@ int main()
 		std::cout << "2. Display Statistics\n";
 		std::cout << "3. Exit\n";
 		std::cout << "Enter your choice: ";
-		std::cin >> choice;
+		
+		if (!(std::cin >> choice))
+		{
+			std::cin.clear();
+			std::cin.ignore(1000, '\n');
+
+			std::cout << "Invalid imput. Please enter a number from the menu.\n";
+			continue;
+		}
 
 		switch (choice)
 		{
