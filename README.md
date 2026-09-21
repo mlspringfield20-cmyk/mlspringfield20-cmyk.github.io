@@ -40,3 +40,21 @@ This week I successfully implemented the core mechanics of the simulation, inclu
 ### 🔮 Next Steps
 
 My next goal is to continue refining the simulation and making it more realistic. I want to improve the user experience, perform additional testing, and explore the new features that can provide more detailed simulation results and better insight to how the virus spreads through the population.
+
+
+# Milestone 3 Stand-Up
+
+## ⚙️ Overview
+This week I focused on improving the virus simulation and organizing the code into smaller, easier-to-manage functions.
+
+## 🛠️ Improvements
+I refactored the simulation logic by creating separate functions for infections, mutations, and deaths. I also fixed an issue with the death percentage calculation.
+
+## 🌵 Challenges
+One challenge was making sure the simulation still worked correctly after moving logic out of AdvanceTurn(). I tested the program after each change to verify everything worked as expected.
+
+## 🏆 Accomplishments
+I gained more experience with refactoring and learned how breaking large functions into smaller functions can improve readability and maintainability.
+
+## 🔮 Next Steps
+I plan to continue expanding the simulation, improving the user experience, and refining the overall structure of the program.
