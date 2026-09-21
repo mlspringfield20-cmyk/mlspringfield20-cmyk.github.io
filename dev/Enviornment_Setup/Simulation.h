@@ -11,6 +11,11 @@ private:
 	Virus virus;
 	int currentTurn;
 
+
+	void ProcessMutations();
+	void ProcessDeaths();
+	void ProcessInfections();
+
 public:
 	Simulation();
 

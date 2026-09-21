@@ -56,7 +56,7 @@ void Simulation::DisplayStatistics() const
 	double uninfectedPercent = (uninfected * 100.0) / totalPopulation;
 	double infectedPercent = (infected * 100.0) / totalPopulation;
 	double mutatedPercent = (mutated * 100.0) / totalPopulation;
-	double deadPercent = (dead * 100.0) * totalPopulation;
+	double deadPercent = (dead * 100.0) / totalPopulation;
 
 
 	std::cout << "\n==== Detailed Simulation Results====\n";
@@ -78,32 +78,28 @@ void Simulation::DisplayStatistics() const
 
 	std::cout << "====================================\n";
 }
-
-void Simulation::AdvanceTurn()
-{
-	currentTurn++;
-
-	for (Person& person : population)
-	{
-
-		if (person.GetState() == PersonState::INFECTED)
+void Simulation::ProcessMutations()
+ {
+		for (Person& person : population)
 		{
-			person.IncrementInfectionTime();
-
-			if (person.GetinfectionTime() >= 3)
+			if (person.GetState() == PersonState::INFECTED)
 			{
-				
-				double chance = static_cast<double>(rand()) / RAND_MAX;
+				person.IncrementInfectionTime();
 
-				if (chance < virus.GetMutationrate())
+				if (person.GetinfectionTime() >= 3)
 				{
-					person.SetState(PersonState::MUTATED);
+					double chance = static_cast<double>(rand()) / RAND_MAX;
+
+					if (chance < virus.GetMutationrate())
+					{
+						person.SetState(PersonState::MUTATED);
+					}
 				}
-				
 			}
 		}
 	}
-
+void Simulation::ProcessDeaths()
+{
 	for (Person& person : population)
 	{
 		if (person.GetState() == PersonState::MUTATED)
@@ -116,19 +112,32 @@ void Simulation::AdvanceTurn()
 			}
 		}
 	}
+}
 
-	for (Person& person : population)
+
+	void Simulation::ProcessInfections()
 	{
-		if (person.GetState() == PersonState::UNINFECTED)
+		for (Person& person : population)
 		{
-			double chance = static_cast<double>(rand()) / RAND_MAX;
-
-			if (chance < virus.GetInfectionRate())
+			if (person.GetState() == PersonState::UNINFECTED)
 			{
-				person.SetState(PersonState::INFECTED);
+				double chance = static_cast<double>(rand()) / RAND_MAX;
+
+				if (chance < virus.GetInfectionRate())
+				{
+					person.SetState(PersonState::INFECTED);
+				}
 			}
 		}
 	}
+
+void Simulation::AdvanceTurn()
+{
+	currentTurn++;
+	
+	ProcessMutations();
+	ProcessDeaths();
+	ProcessInfections();
 
 	std::cout << "\n12 hours have passed. The virus is spreading...\n";
 }
