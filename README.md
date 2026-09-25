@@ -1,5 +1,121 @@
 Markdown 
+# Martavious Springfield
 
+## Aspiring Software Developer and Game Developer
+
+Welcome to my portfolio. This portfolio highlights the work I completed throughout my software development coursework and demonstrates the programming skills I have developed through hands-on projects, problem solving, debugging, and version control.
+
+---
+
+## Navigation
+
+- [About Me](#about-me)
+- [Skills](#skills)
+- [Projects](#projects)
+- [Contact](#contact)
+- [Resume](#resume)
+
+---
+
+# About Me
+
+Hello, my name is Martavious Springfield. I am an aspiring software developer with a strong interest in C++ programming, software engineering, and game development. Throughout this course I have learned how to build applications from the ground up while applying object-oriented programming principles, debugging techniques, testing practices, and version control using GitHub.
+
+One of my biggest goals is to continue improving my programming skills while working on larger and more complex projects. I enjoy solving problems, learning new technologies, and finding ways to improve both my code and my development process. Every project I complete teaches me something new and helps me grow as a developer.
+
+My long-term goal is to continue developing software and eventually create larger projects that combine technical problem solving, creativity, and user-focused design.
+
+---
+
+# Skills
+
+## Programming Languages
+
+- C++
+- HTML
+- Markdown
+
+## Development Tools
+
+- Visual Studio
+- GitHub
+- GitHub Pages
+
+## Technical Skills
+
+- Object-Oriented Programming
+- Version Control
+- Debugging
+- Software Testing
+- Documentation
+- Problem Solving
+- Project Organization
+- Source Control Management
+
+---
+
+# Projects
+
+## Mutation Virus Simulation
+
+### Project Overview
+
+The Mutation Virus Simulation is a C++ application that simulates how a virus spreads throughout a population over time. The simulation tracks healthy, infected, mutated, and deceased individuals while allowing users to advance the simulation and monitor population statistics.
+
+This project was developed throughout multiple milestones and gradually expanded into a complete application. Each milestone introduced new functionality, improvements, and refinements until the project became a fully functional simulation.
+
+### Technologies Used
+
+- C++
+- Visual Studio
+- GitHub
+- GitHub Issues
+- Markdown Documentation
+
+### Major Features
+
+- Population management system
+- Infection spread mechanics
+- Mutation progression system
+- Death and survival calculations
+- Population statistics tracking
+- Menu-driven user interface
+- Simulation advancement system
+- Input validation and error handling
+
+### Challenge and Lesson Learned
+
+One of the biggest challenges I faced during this project was making sure the simulation data updated correctly as new features were added. As the project became larger, I had to spend more time debugging, testing, and organizing my code to ensure everything worked together correctly.
+
+This project helped me gain a better understanding of object-oriented programming, software design, debugging techniques, and version control. It also reinforced the importance of building projects step by step and testing features throughout development instead of waiting until the end.
+
+### Future Improvements
+
+If I continue developing this project, I would like to add multiple virus strains, more advanced mutation behaviors, additional simulation settings, and graphical representations of population statistics. I would also like to expand the customization options available to users and improve the overall user experience.
+
+---
+
+# Contact
+
+Email: mlspringfield20@gmail.com
+
+GitHub Profile:
+
+https://github.com/mlspringfield20-cmyk
+
+---
+
+# Resume
+
+My resume highlights my education, technical skills, project experience, and professional development. As I continue building new projects and gaining experience, I will continue updating my resume to reflect my growth as a software developer.
+
+Resume available upon request.
+
+---
+
+# Career Goals
+
+My goal is to continue expanding my software development knowledge while working on increasingly complex projects. I want to strengthen my understanding of programming, software architecture, debugging, testing, and project management.
 Milestone 1 Stand-Up
 
 ##Overview:
@@ -18,66 +134,3 @@ I've learned how to use Git for version control, manage GitHub issues, and struc
 ##Next Steps:
 
 The next priority for my simulation is implementing the remaining mechanics. This includes infection spread, mutation progression, death logic, and a display for simulation statistics. This requires me to continue testing and refining my simulation as development progresses.
-
-
-</> Markdown
-
-## Milestone 2 Stand-up
-
-### ⚙️ Overview
-
-This week I continued development of my Mutation Virus Simulation project. I implemented the infection, mutation, and death mechanics that drive the simulation. I also expanded the statistics system and improved the menu by adding input validation and clearer feedback.
-
-### 🌵 Challenges 
-
-One of the biggest challenges this week was getting the simulation logic to work correctly. I had to make sure individuals transitioned between uninfected, infected, mutated, and dead states at the right time. I also spent time debugging compile errors and testing the simulation to make sure the statistics matched what was happening in the population.
-
-### 🏆 Accomplishments
-
-This week I successfully implemented the core mechanics of the simulation, including infection spread, mutation progression, and mortality. I also gained more experience working with classes, loops, functions, and object-oriented programming. In addition, I continued improving my GitHub workflow by using commits, issues, and documentation to track development progress.
-
-
-### 🔮 Next Steps
-
-My next goal is to continue refining the simulation and making it more realistic. I want to improve the user experience, perform additional testing, and explore the new features that can provide more detailed simulation results and better insight to how the virus spreads through the population.
-
-
-# Milestone 3 Stand-Up
-
-## ⚙️ Overview
-This week I focused on improving the virus simulation and organizing the code into smaller, easier-to-manage functions.
-
-## 🛠️ Improvements
-I refactored the simulation logic by creating separate functions for infections, mutations, and deaths. I also fixed an issue with the death percentage calculation.
-
-## 🌵 Challenges
-One challenge was making sure the simulation still worked correctly after moving logic out of AdvanceTurn(). I tested the program after each change to verify everything worked as expected.
-
-## 🏆 Accomplishments
-I gained more experience with refactoring and learned how breaking large functions into smaller functions can improve readability and maintainability.
-
-## 🔮 Next Steps
-I plan to continue expanding the simulation, improving the user experience, and refining the overall structure of the program.
-
-
-# Final Milestone Stand-Up
-
-## ⚙️ Overview
-
-This week I completed the final version of my Mutation Virus Simulation project. My main focus was making sure all of the core features were working correctly, testing the simulation, fixing bugs, and completing the final documentation. I also made improvements to the menu system so users have more control over the simulation.
-
-## 🛠️ Project Wrap-Up
-
-Before submitting the project, I finalized the infection, mutation, and death systems and verified that population statistics were updating correctly after each turn. I improved menu navigation, added input validation, and completed the final testing process. I also finished the Milestone 4 documentation and added screenshots demonstrating the completed project.
-
-## 🌵 Challenges
-
-One of the biggest challenges I faced was making sure the simulation statistics displayed correctly after changing parts of the simulation flow. At one point the population data was not updating correctly, so I had to go back through the code, identify the problem, and test the simulation multiple times until everything was working as expected. This helped me become more comfortable with debugging and problem solving.
-
-## 📚 Biggest Takeaway
-
-The biggest lesson I learned from this course was the importance of building a project step by step. Throughout this project I learned how classes, objects, vectors, and object-oriented programming work together to create larger systems. I also gained experience using GitHub, tracking progress through issues, and improving code through testing and refactoring.
-
-## 🔮 Future Development
-
-If I continued developing this project, I would like to add multiple virus strains, more advanced mutation behaviors, difficulty settings, and graphical charts to show how the population changes over time. I would also like to add additional simulation options so users can customize how the virus spreads and evolves.
