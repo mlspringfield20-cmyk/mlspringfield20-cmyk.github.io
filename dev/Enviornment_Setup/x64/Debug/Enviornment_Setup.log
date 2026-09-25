@@ -1,2 +1,6 @@
-﻿  Simulation.cpp
+﻿  Enviornment_Setup.cpp
+  Person.cpp
+  Simulation.cpp
+  Virus.cpp
+  Generating Code...
   Enviornment_Setup.vcxproj -> C:\Users\mlspr\source\repos\mlspringfield20-cmyk\cos-1project\dev\x64\Debug\Enviornment_Setup.exe

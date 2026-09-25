@@ -154,6 +154,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Milestone3.md" />
+    <None Include="Milestone4.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

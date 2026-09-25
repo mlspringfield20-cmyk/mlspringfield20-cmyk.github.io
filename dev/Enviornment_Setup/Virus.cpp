@@ -2,9 +2,9 @@
 
 Virus::Virus()
 {
-	infectionRate = 0.30;
-	mutationRate = 0.13;
-	mortalityRate = 0.04;
+	infectionRate = 0.28;
+	mutationRate = 0.11;
+	mortalityRate = 0.025;
 }
 
 double Virus::GetInfectionRate() const
